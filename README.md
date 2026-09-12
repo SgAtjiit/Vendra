@@ -42,8 +42,53 @@
 
 ```
 vendra/
-├── backend/    # Spring Boot 3.3 REST API (Java 21/17, Spring Security, JWT, JPA, MySQL)
-└── frontend/   # React 19 Client (Redux Toolkit, Tailwind CSS, Material UI, Vite)
+├── 📁 backend/                        # Spring Boot 3.3 REST API (Java 21/17)
+│   ├── 📁 src/
+│   │   ├── 📁 main/
+│   │   │   ├── 📁 java/com/vendra/
+│   │   │   │   ├── 📁 ai/             # Vendra AI Assistant & Chatbot Integration
+│   │   │   │   ├── 📁 config/         # Security (JWT, CORS), Web & Application Configs
+│   │   │   │   ├── 📁 controller/     # REST Controllers (Auth, Product, Cart, Order, Admin, Seller, etc.)
+│   │   │   │   ├── 📁 domain/         # Domain Enums (Roles, Order Status, Account Status, Deal Types)
+│   │   │   │   ├── 📁 dto/            # Data Transfer Objects (API Requests & Responses)
+│   │   │   │   ├── 📁 exception/      # Global Exception Handler & Domain Exceptions
+│   │   │   │   ├── 📁 mapper/         # Data Mapping Utilities
+│   │   │   │   ├── 📁 model/          # JPA Entities (User, Seller, Product, Order, Cart, Coupon, etc.)
+│   │   │   │   ├── 📁 repository/     # Spring Data JPA Repositories
+│   │   │   │   ├── 📁 service/        # Core Business Logic Interfaces & Service Implementations
+│   │   │   │   ├── 📁 utils/          # OTP Verification & Helper Utilities
+│   │   │   │   └── 📄 EcommerceMultiVendorApplication.java # Spring Boot Main Entry Point
+│   │   │   └── 📁 resources/
+│   │   │       ├── 📄 application.properties # Server, Database, JWT, Mail & Payment Configs
+│   │   │       └── 📄 application.template.properties
+│   │   └── 📁 test/                   # Backend Unit & Integration Tests
+│   ├── 📄 Dockerfile                  # Containerization Configuration for Backend
+│   ├── 📄 pom.xml                     # Maven Dependencies & Build Setup
+│   └── 📄 mvnw / mvnw.cmd             # Maven Wrapper Executables
+│
+└── 📁 frontend/                       # React 19 Client Web Application (Vite)
+    ├── 📁 public/                     # Static Public Assets & Favicon
+    ├── 📁 src/
+    │   ├── 📁 admin/                  # Admin Control Center (Seller Moderation, Coupons, Deals)
+    │   ├── 📁 customer/               # Customer Portal (Storefront, Cart, Checkout, Wishlist, AI Assistant)
+    │   ├── 📁 seller/                 # Vendor Hub (Inventory, Analytics, Orders, Payouts, Profile)
+    │   ├── 📁 Redux Toolkit/          # State Management (Admin, Customer, Seller Slices)
+    │   │   ├── 📁 Admin/              # Admin Slices (Coupon & Deal Slices)
+    │   │   ├── 📁 Customer/           # Customer Slices (Auth, Product, Cart, Order, AI Chat, Wishlist)
+    │   │   ├── 📁 Seller/             # Seller Slices (Inventory, Orders, Revenue Charts, Payouts)
+    │   │   └── 📄 Store.js            # Centralized Redux Store Configuration
+    │   ├── 📁 routes/                 # Application Routing (Admin, Customer, Seller Routes)
+    │   ├── 📁 Theme/                  # Custom Material UI (MUI) Styling Theme
+    │   ├── 📁 util/                   # Helper Utilities (Cloudinary Uploads, Cart Calculations)
+    │   ├── 📁 data/                   # Navigation Categories, Dynamic Filters & Banner Mock Data
+    │   ├── 📄 App.jsx                 # Root Application Layout & Router Container
+    │   ├── 📄 index.css / App.css     # Global Styles & Tailwind CSS Config Imports
+    │   └── 📄 main.jsx                # Application React DOM Mounting Entry Point
+    ├── 📄 index.html                  # HTML Document Template
+    ├── 📄 package.json                # Frontend Package Manifest & Build Scripts
+    ├── 📄 tailwind.config.js          # Tailwind CSS Framework Config
+    ├── 📄 vite.config.js              # Vite Bundler Configuration
+    └── 📄 eslint.config.js            # Code Linting Configuration
 ```
 
 ---
